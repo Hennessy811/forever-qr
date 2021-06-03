@@ -3,26 +3,51 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.2.0",
+    "@heroicons/react": "^1.0.1",
+    "@material-ui/icons": "^4.11.2",
+    "@react-firebase/auth": "^0.2.10",
     "@reduxjs/toolkit": "^1.5.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
     "@types/react-dom": "^16.9.0",
-    "@types/react-redux": "^7.1.7",
+    "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "^9",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "clsx": "^1.1.1",
+    "craco": "^0.0.3",
+    "file-saver": "^2.0.5",
+    "firebase": "^8.6.3",
+    "postcss": "^7",
+    "qrcode.react": "^1.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.0",
+    "react-redux-firebase": "^3.10.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "typescript": "~4.1.5"
+    "redux-firestore": "^0.15.0",
+    "sass": "^1.32.12",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "~4.1.5",
+    "uuid": "^8.3.2"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "lint": "eslint src --fix",
+    "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +63,34 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/firebase": "^3.2.1",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "@types/react-redux": "^7.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unused-imports": "^1.1.0",
+    "husky": "^6.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
   }
 }
