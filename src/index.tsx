@@ -15,6 +15,14 @@ import firebaseConfig from "./shared/utils/firebaseConfig"
 
 import "firebase/auth"
 
+const auth = firebase.auth()
+const db = firebase.database()
+if (process.env.NODE_ENV === "development") {
+  // Point to the RTDB emulator running on localhost.
+  auth.useEmulator("http://localhost:9099")
+  db.useEmulator("localhost", 9000)
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <FirebaseAuthProvider {...firebaseConfig} firebase={firebase}>

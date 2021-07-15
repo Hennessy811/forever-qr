@@ -1,55 +1,12 @@
-import React, { Fragment } from "react"
+import React from "react"
 
-import { Menu, Transition } from "@headlessui/react"
 import { connect } from "react-redux"
 import { useFirebase } from "react-redux-firebase"
 
 import { useAppSelector } from "src/app/hooks"
 import { RootState } from "src/app/store"
 
-const Dropdown = ({ title, options }) => {
-  return (
-    <div className="">
-      <Menu as="div" className="relative inline-block text-left">
-        <div>
-          <Menu.Button className="inline-flex justify-center w-full">
-            {title}
-          </Menu.Button>
-        </div>
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-xl focus:outline-none">
-            <div className="px-1 py-1 ">
-              {options.map((option) => (
-                <Menu.Item key={option.title}>
-                  {({ active }) => (
-                    <button
-                      onClick={() => option.action()}
-                      className={`${
-                        active
-                          ? "bg-violet-500 text-purple-500"
-                          : "text-gray-900"
-                      } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                    >
-                      {option.title}
-                    </button>
-                  )}
-                </Menu.Item>
-              ))}
-            </div>
-          </Menu.Items>
-        </Transition>
-      </Menu>
-    </div>
-  )
-}
+import Dropdown from "../components/Dropdown"
 
 const Header = () => {
   const user = useAppSelector((state) => state.firebase.profile)
@@ -79,7 +36,7 @@ const Header = () => {
             <img
               src={user.avatarUrl}
               alt=""
-              className="w-10 h-10 rounded-full"
+              className="object-cover w-10 h-10 rounded-full"
             />
           </div>
         }

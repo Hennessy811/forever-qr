@@ -4,6 +4,9 @@ import { useFirebaseConnect } from "react-redux-firebase"
 import { useParams } from "react-router-dom"
 
 import { useAppSelector } from "src/app/hooks"
+import generateAddress from "src/shared/utils/generateAddress"
+
+import { Values } from "./Home/components/Project"
 
 const Opener = () => {
   useFirebaseConnect([{ path: "projects" }])
@@ -17,11 +20,16 @@ const Opener = () => {
     key: i[0],
     value: i[1],
   }))
-  const currentProject: any = userProjects.find((i) => i.key === id)?.value
+  const currentProject = userProjects.find((i) => i.key === id)?.value as Values
 
   useEffect(() => {
     if (currentProject) {
-      window.location = currentProject.targetUrl
+      // console.log(currentProject, generateAddress(currentProject))
+      try {
+        window.location.replace(generateAddress(currentProject))
+      } catch (error) {
+        console.log(error)
+      }
     }
   }, [id, currentProject])
 

@@ -3,7 +3,7 @@ import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 
 import Auth from "./pages/Auth"
-import Home from "./pages/Home"
+import Home from "./pages/Home/Home"
 import Opener from "./pages/Opener"
 import Layout from "./shared/layout"
 import AuthIsLoaded from "./shared/layout/AuthIsLoaded"
