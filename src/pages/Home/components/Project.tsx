@@ -40,22 +40,22 @@ export interface Values {
 const Project = ({ id, data, onDelete, onChange }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [values, setValues] = useState<Values>({
-    type: "url",
+    type: data.type,
     title: data.title,
     url: data.url,
     email: {
-      address: "",
-      subject: "",
-      cc: "",
+      address: data.email.address || "",
+      subject: data.email.subject || "",
+      cc: data.email.cc || "",
     },
     wifi: {
-      ssid: "",
-      password: "",
-      type: "",
+      ssid: data.wifi.ssid || "",
+      password: data.wifi.password || "",
+      type: data.wifi.type || "",
     },
-    phone: "",
-    bgColor: "#000000",
-    qrColor: "#ffffff",
+    phone: data.phone || "",
+    bgColor: data.bgColor || "#000000",
+    qrColor: data.qrColor || "#ffffff",
   })
 
   const link = `${BASE_URL}/project/${id}`
@@ -94,6 +94,8 @@ const Project = ({ id, data, onDelete, onChange }) => {
     },
   ]
 
+  const address = generateAddress(values)
+
   return (
     <>
       <div className="flex flex-col w-full p-5 rounded-md shadow-md">
@@ -126,9 +128,9 @@ const Project = ({ id, data, onDelete, onChange }) => {
           </span>
           <div className="max-w-md text-sm truncate has-tooltip">
             <span className="px-3 py-1 -mt-10 text-base font-normal text-gray-100 bg-gray-700 rounded-md shadow-lg tooltip">
-              {generateAddress(values)}
+              {address}
             </span>
-            {generateAddress(values)}
+            {address}
           </div>
         </div>
       </div>
@@ -140,9 +142,7 @@ const Project = ({ id, data, onDelete, onChange }) => {
           setValues(data)
         }}
         onSave={() => {
-          console.log(values)
           onChange(values)
-
           closeModal()
         }}
         values={values}
