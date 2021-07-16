@@ -1,0 +1,76 @@
+[debug] [2021-07-16T09:25:03.705Z] ----------------------------------------------------------------------
+[debug] [2021-07-16T09:25:03.706Z] Command:       /Users/dmitrijmalahov/.nvm/versions/node/v14.16.1/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2021-07-16T09:25:03.706Z] CLI Version:   9.6.0
+[debug] [2021-07-16T09:25:03.707Z] Platform:      darwin
+[debug] [2021-07-16T09:25:03.707Z] Node Version:  v14.16.1
+[debug] [2021-07-16T09:25:03.707Z] Time:          Fri Jul 16 2021 12:25:03 GMT+0300 (Moscow Standard Time)
+[debug] [2021-07-16T09:25:03.708Z] ----------------------------------------------------------------------
+[debug] [2021-07-16T09:25:03.708Z] 
+[debug] [2021-07-16T09:25:03.715Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-16T09:25:03.715Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: auth, database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, database, hosting"}}
+[debug] [2021-07-16T09:25:03.732Z] [hub] writing locator at /var/folders/fy/kfhxz3w523nbm990x2fv7y1r0000gn/T/hub-forever-qr.json
+[debug] [2021-07-16T09:25:03.757Z] > refreshing access token with scopes: []
+[debug] [2021-07-16T09:25:03.757Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-16T09:25:03.862Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 16 Jul 2021 09:25:04 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-16T09:25:03.893Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/forever-qr [none]
+[debug] [2021-07-16T09:25:04.161Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/forever-qr 200
+[debug] [2021-07-16T09:25:04.161Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/forever-qr {"projectId":"forever-qr","projectNumber":"624742749302","displayName":"forever-qr","name":"projects/forever-qr","resources":{"hostingSite":"forever-qr","realtimeDatabaseInstance":"forever-qr-default-rtdb","storageBucket":"forever-qr.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[debug] [2021-07-16T09:25:04.161Z] database rules config:  [{"instance":"forever-qr-default-rtdb","rules":"/Users/dmitrijmalahov/code/pets/f-qr/database.rules.json"}]
+[debug] [2021-07-16T09:25:04.165Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-07-16T09:25:04.165Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-07-16T09:25:04.165Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2021-07-16T09:25:04.165Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/dmitrijmalahov/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/dmitrijmalahov/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar\",\"--host\",\"localhost\",\"--port\",9000],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2021-07-16T09:25:05.439Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/dmitrijmalahov/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release {"metadata":{"emulator":{"name":"database"},"message":"WARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/dmitrijmalahov/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys\nWARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release"}}
+[debug] [2021-07-16T09:25:05.440Z] 
+ {"metadata":{"emulator":{"name":"database"},"message":"\n"}}
+[debug] [2021-07-16T09:25:06.287Z] 12:25:06.286 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"12:25:06.286 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2021-07-16T09:25:06.443Z] 12:25:06.443 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"12:25:06.443 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000\n"}}
+[debug] [2021-07-16T09:25:08.977Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/forever-qr/webApps/-/config [none]
+[debug] [2021-07-16T09:25:09.972Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/forever-qr/webApps/-/config 200
+[debug] [2021-07-16T09:25:09.972Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/forever-qr/webApps/-/config {"projectId":"forever-qr","appId":"1:624742749302:web:50b993ff172ceaca85bb57","databaseURL":"https://forever-qr-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"forever-qr.appspot.com","locationId":"europe-west","apiKey":"AIzaSyCwr2eJ60Ps0qjwFbueTmOs9CiT8ew-0v4","authDomain":"forever-qr.firebaseapp.com","messagingSenderId":"624742749302","measurementId":"G-RPJTD3E8TD"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2021-07-16T09:25:10.531Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-07-16T09:25:10.531Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-07-16T09:25:10.531Z] Starting Emulator UI with command {"binary":"node","args":["/Users/dmitrijmalahov/.cache/firebase/emulators/ui-v1.4.2/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/dmitrijmalahov/.cache/firebase/emulators/ui-v1.4.2/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2021-07-16T09:25:10.630Z] Web / API server started at http://localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4000\n"}}
+[debug] [2021-07-16T09:25:10.797Z] >>> HTTP REQUEST PUT http://localhost:9000/.settings/rules.json?ns=forever-qr-default-rtdb  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+
+[debug] [2021-07-16T09:25:11.189Z] <<< HTTP RESPONSE 200 {"content-length":"15","content-type":"application/json; charset=utf-8","access-control-allow-origin":"*","cache-control":"no-cache","x-firebase-project-id":"forever-qr-default-rtdb","x-firebase-project-number":"123456789","x-firebase-uuid":"8c36672c-b998-4210-a3c7-3f2701d68c51"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI            │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4000/auth     │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Database       │ localhost:9000 │ http://localhost:4000/database │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Hosting        │ localhost:5000 │ n/a                            │
+└────────────────┴────────────────┴────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
